@@ -31,7 +31,7 @@
     <form method="POST" action="{{ route('studet-package-update', $student_Package->id) }}">@csrf
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Principle Type:</strong>
+                <strong>Principle Type:</strong> 
                {!! Form::text('principle_type', $student_Package->principle_type, array('placeholder' => 'Principle', 'class' => 'form-control')) !!}
             </div>
         </div>

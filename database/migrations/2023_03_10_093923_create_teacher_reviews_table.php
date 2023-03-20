@@ -16,11 +16,13 @@ return new class extends Migration
         Schema::create('teacher_reviews', function (Blueprint $table) {
             $table->id();
             $table->string('student_id')->nullable();
-            $table->string('teacher_id')->nullable();
             $table->string('course_id')->nullable();
+
+
+            $table->string('teacher_id')->nullable();
             $table->string('rating')->nullable();
             $table->string('comment')->nullable();
-            $table->string('description')->nullable();
+            $table->string('description')->nullable(); 
             $table->timestamps();
         });
     }

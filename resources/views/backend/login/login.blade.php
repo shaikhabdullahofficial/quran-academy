@@ -149,7 +149,7 @@
 									<!--begin::Email-->
                                     <div class="input-container">
                                         <i class="bi bi-envelope"></i>
-                                        <input type="password" id="lockedField" class="form-control" name="email"  placeholder="Email">
+                                        <input type="email" id="lockedField" class="form-control" name="email"  placeholder="Email">
                                     </button>
                                       </div>
 									<!--end::Email-->

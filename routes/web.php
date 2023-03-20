@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentPackageController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\TeacherStudentController;
 use App\Models\Student_Package;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -88,3 +90,26 @@ Route::controller(StudentPackageController::class)
 });
 
 Route::get('teachers-student/{teacher}',[StudentController::class, 'studentTeacherSelecte'])->name('teachers.show');
+
+
+// Student on Teacter Dashboard
+Route::get('students', [TeacherController::class, 'all_students'])->name('students');
+Route::get('student_details/{id}', [TeacherController::class, 'show_details'])->name('studentdetails');
+
+
+// Teacher student review
+Route::get('review/{id}', [TeacherStudentController::class, 'index'])->name('review');
+Route::post('send_review/{id}', [TeacherStudentController::class, 'store'])->name('send.review');
+
+Route::get('edit_review/{id}', [TeacherStudentController::class, 'edit'])->name('edit.review');
+Route::post('update_review/{id}', [TeacherStudentController::class, 'update'])->name('update.review');
+
+
+Route::get('all_reviews', [TeacherStudentController::class, 'show'])->name('all.reviews');
+
+
+Route::get('delete_review/{id}', [TeacherStudentController::class, 'destroy'])->name('delete.review');
+
+
+
+

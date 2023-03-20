@@ -403,6 +403,5 @@
         </div>
         <!--end::Content wrapper-->
 		<!--begin::Drawers-->
-		
+
 @endsection
-		

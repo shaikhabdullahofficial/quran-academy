@@ -21,4 +21,3 @@ class Teacher_review extends Model
     }
 
 }
-    
